@@ -1,0 +1,14 @@
+@import 'simplelightbox/dist/simple-lightbox.min.css';
+
+
+.gallery {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  max-width: 1128px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
