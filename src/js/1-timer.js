@@ -2,6 +2,7 @@ import flatpickr from "flatpickr";
 import iziToast from "izitoast";
 
 let buttonStart = document.querySelector('[data-start]');
+let inputEl = document.querySelector('#datetime-picker');
 
 let userSelectedDate = 0;
 buttonStart.disabled = true;
@@ -50,5 +51,35 @@ function convertMs(ms) {
 console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
 console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
 console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
+
+
+
+
+function onTimer() {
+  buttonStart.disabled = true;
+  inputEl.disabled = true;
+  const timerInterval = setInterval(() => {
+    const timeRemaining = userSelectedDate - new Date();
+    if (timeRemaining < 0) {
+      clearInterval(timerInterval);
+      iziToast.success({
+      message: "Timer completed"
+      })
+      buttonStart.disabled = true;
+      inputEl.disabled = false;
+    } else {
+      const { days, hours, minutes, seconds } = convertMs(timeRemaining);
+      document.querySelector('[data-days]').textContent = String(days).padStart(2, '0');
+      document.querySelector('[data-hours]').textContent = String(hours).padStart(2, '0');
+      document.querySelector('[data-minutes]').textContent = String(minutes).padStart(2, '0');
+      document.querySelector('[data-seconds]').textContent = String(seconds).padStart(2, '0');
+    }
+  }, 1000);
+    
+    
+  }
+
+  buttonStart.addEventListener('click', onTimer);
+
 
 
