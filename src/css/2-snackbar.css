@@ -1,60 +1,23 @@
-/* .feedback-form {
-  margin-left: auto;
-  margin-right: auto;
+@import "izitoast/dist/css/iziToast.min.css";
+.js-button {
+  font-size: 14px;
+  display: flex;
+  margin-left: 12px;
+}
+.js-fieldset {
+  margin-left: 12px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 8px;
+  max-width: 200px;
+}
+.js-label {
+  text-align: start;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 8px;
-  width: 360px;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
+  max-width: 200px;
+  margin-left: 12px;
+
 }
 
 
-.feedback-form label {
-display: flex;
-align-items: flex-start;
-justify-content: flex-start;
-flex-direction: column;
-gap: 8px;
-}
-
-.feedback-form input,
-.feedback-form textarea {
-border: 1px solid #808080;
-border-radius: 4px;
-width: 360px;
-height: 40px;
-color: #2e2f42;
-line-height: 1.5;
-letter-spacing: 0.04em;
-padding-left: 16px;
-}
-
-.feedback-form input:hover {
-  border: 1px solid #000;
-}
-
-.feedback-form textarea {
-padding-top: 8px;
-resize: none;
-}
-
-.feedback-form button {
-margin-top: 8px;
-border: none;
-border-radius: 8px;
-padding: 8px 16px;
-width: 95px;
-height: 40px;
-background-color: #4e75ff;
-font-weight: 500;
-letter-spacing: 0.04em;
-font-size: 16px;
-color: #fff;
-}
-
-.feedback-form button:hover {
-background-color: #6c8cff;
-
-} */
