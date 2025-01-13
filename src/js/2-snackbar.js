@@ -1,7 +1,7 @@
 import iziToast from "izitoast";
 
 const inputDelayForm = document.querySelector('.js-input');
-const buttonSubmit = document.querySelector('.js-button');
+const formSubmit = document.querySelector('.js-form');
 
 
 
@@ -58,4 +58,4 @@ if (state) {
 
 
 
-buttonSubmit.addEventListener('click', onCreatePromise);
+formSubmit.addEventListener('submit', onCreatePromise);
